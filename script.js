@@ -1,4 +1,9 @@
 
+// Segunda entrega CoderHouse JavaScript - Comisión 62030
+// Jose Alejandro Palacios  
+
+
+
 class Producto {
     static contador = 0; // Variable estática para contar las instancias
   
@@ -7,7 +12,7 @@ class Producto {
       this.referencia = referencia;
       this.precio = precio;
       this.imagen = imagen;
-      Producto.contador++; // Incrementar el contador al crear una nueva instancia
+      Producto.contador++; 
     }
   }
   
@@ -36,7 +41,7 @@ function agregarAlCarrito(precio, producto) {
     let carrito = localStorage.getItem('carrito') ? parseInt(localStorage.getItem('carrito')) : 0;
     carrito += precio;
     localStorage.setItem('carrito', carrito);
-    document.getElementById('totalCarrito').innerHTML = `Total en el carrito: $${carrito}`;
+    document.getElementById('totalCarrito').innerHTML = `Total: $${carrito}`;
   
 // Realizar seguimiento del número de veces que se agrega el producto
     let cantidadProducto = localStorage.getItem(`${producto.referencia}`) ? parseInt(localStorage.getItem(`${producto.referencia}`)) : 0;
@@ -47,13 +52,14 @@ function agregarAlCarrito(precio, producto) {
 
 function actualizarTotalCarrito() {
     let carrito = localStorage.getItem('carrito') ? parseInt(localStorage.getItem('carrito')) : 0;
-    document.getElementById('totalCarrito').innerHTML = `Total en el carrito: $${carrito}`;
+    document.getElementById('totalCarrito').innerHTML = `Total: $${carrito}`;
+    document.getElementById(`pagoCompletado`).innerHTML = ``;
 
 // Actualizar las unidades de cada producto
     for (let i = 1; i <= Producto.contador; i++) {    
         let referencia = `REF00${i}`;
         let cantidadProducto = localStorage.getItem(referencia) ? parseInt(localStorage.getItem(referencia)) : 0;
-        document.getElementById(`totalREF00${i}`).innerHTML = `Unidades Producto ${i}: ${cantidadProducto}`;
+        document.getElementById(`totalREF00${i}`).innerHTML = `${producto.nombre}: ${cantidadProducto}`;
     }
 }
 function vaciarCarrito() {
@@ -61,10 +67,29 @@ function vaciarCarrito() {
     for (let i = 1; i <= Producto.contador; i++) { 
         let referencia = `REF00${i}`;
         localStorage.setItem(referencia, '0'); // Reiniciar contador de cada producto
-        document.getElementById(`total${referencia}`).innerHTML = `Unidades Producto ${i}: 0`; // Actualizar visualización del contador de cada producto
+        document.getElementById(`total${referencia}`).innerHTML = ``; // Actualizar visualización del contador de cada producto
     }
     actualizarTotalCarrito(); // Actualizar el total del carrito y las unidades de cada producto
+    
+    
 }
+
+function getRandomInt(max) {
+  return Math.floor(Math.random() * max);
+}
+
+let numeroConfirmacion = getRandomInt(99999999999);
+
+const compraCompleta = document.getElementById("pagar");
+compraCompleta.addEventListener("click", confirmarCompra);
+
+function confirmarCompra(){
+  document.getElementById(`pagoCompletado`).innerHTML = `<br><br><img src="images/pay.png" width="50px" class="imagen"><h3>Pago Confirmado</h3><h4>Número de confirmación<br>${numeroConfirmacion}</h4><br><img src="images/gracias.png" width="50px">`;
+}
+
+
+
+
 
 // Llamar a la función para actualizar el total al cargar la página
 window.onload = actualizarTotalCarrito;
