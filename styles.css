@@ -28,7 +28,7 @@
 
 .filaTres {
   width: 100%;
-  height: 900px;
+  height: 1200px;
   display: flex;
   margin-bottom: 10px;
 }
@@ -41,9 +41,14 @@ padding: 20px;
 margin: 20px;
 text-align: center;
 width: 250px;
-height: 230px;
+height: 250px;
 
 
+}
+
+
+.producto-fila{
+  height: 500px;
 }
 
 
@@ -65,10 +70,12 @@ height: 230px;
   display: flex;
 }
 
+
 .totalUnidades, #totalCarrito{
  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
  color: #ffffff;
  font-weight: bold;
+ margin-top: 20px;
   
 }
 
@@ -82,4 +89,24 @@ height: 230px;
 
 h3, h4 {
   color: #fff;
+}
+
+#totales{
+padding: 10px;  
+border: 2px solid rgba(249, 247, 247, 0.445);
+border-radius: 5px;
+}
+
+
+
+.button2 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #008CBA;
+  transition-duration: 0.4s;
+}
+
+.button2:hover {
+  background-color: #008CBA;
+  color: white;
 }

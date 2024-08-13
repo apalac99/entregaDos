@@ -30,7 +30,7 @@ class Producto {
   for (let i = 0; i < productos.length; i++) {
     const producto = productos[i];
     const productElement = document.getElementById(`product${i + 1}`);
-    productElement.innerHTML = `<H2>${producto.nombre}</h2>  <img src="images/${producto.imagen}"  width="100" height="100"> <br>  ${producto.referencia} <br> $${producto.precio} <br><br><button onclick="agregarAlCarrito(${producto.precio}, productos[${i}])">Agregar al carrito</button>`;
+    productElement.innerHTML = `<H2>${producto.nombre}</h2>  <img src="images/${producto.imagen}"  width="100" height="100"> <br>  ${producto.referencia} <br> $${producto.precio} <br><br><button class="button button2" onclick="agregarAlCarrito(${producto.precio}, productos[${i}])">Agregar al carrito</button>`;
   }
 
 const botonVaciar = document.getElementById("vaciarCarritoBtn");
