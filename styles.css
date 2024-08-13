@@ -114,3 +114,19 @@ border-radius: 5px;
   background-color: #008CBA;
   color: white;
 }
+
+.button3 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #008CBA;
+  transition-duration: 0.4s;
+  height: 30px;
+  border-radius: 15px;
+  box-shadow: 0 6px #1d025f62;
+}
+
+
+.button3:hover {
+  background-color: #008CBA;
+  color: white;
+}
