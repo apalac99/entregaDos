@@ -47,7 +47,7 @@ function agregarAlCarrito(precio, producto) {
     let cantidadProducto = localStorage.getItem(`${producto.referencia}`) ? parseInt(localStorage.getItem(`${producto.referencia}`)) : 0;
     cantidadProducto++;
     localStorage.setItem(`${producto.referencia}`, cantidadProducto);
-    document.getElementById(`total${producto.referencia}`).innerHTML = `Unidades ${producto.nombre}: ${cantidadProducto}`;
+    document.getElementById(`total${producto.referencia}`).innerHTML = `<img src="images/duck.png"  width="20"> Unidades ${producto.nombre}: ${cantidadProducto}`;
 }
 
 function actualizarTotalCarrito() {
