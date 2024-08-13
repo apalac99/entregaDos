@@ -91,10 +91,11 @@ h3, h4 {
   color: #fff;
 }
 
-#totales{
+#totales, #totalCarrito{
 padding: 10px;  
 border: 2px solid rgba(249, 247, 247, 0.445);
 border-radius: 5px;
+
 }
 
 
