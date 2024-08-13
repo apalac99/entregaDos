@@ -87,9 +87,4 @@ function confirmarCompra(){
   document.getElementById(`pagoCompletado`).innerHTML = `<br><br><img src="images/pay.png" width="50px" class="imagen"><h3>Pago Confirmado</h3><h4>Número de confirmación<br>${numeroConfirmacion}</h4><br><img src="images/gracias.png" width="50px">`;
 }
 
-
-
-
-
-// Llamar a la función para actualizar el total al cargar la página
-window.onload = actualizarTotalCarrito;
+window.onload = actualizarTotalCarrito();
