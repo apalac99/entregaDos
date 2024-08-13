@@ -22,7 +22,7 @@ class Producto {
     new Producto("Patito mora", "REF002", 20, "2.jpg"),
     new Producto("Patito azul", "REF003", 30, "3.jpg"),
     new Producto("Patito rojo", "REF004", 40, "4.jpg"),
-    new Producto("Patito limon", "REF005", 50, "5.jpg"),
+    new Producto("Patito limón", "REF005", 50, "5.jpg"),
     new Producto("Patito gris", "REF006", 60, "6.jpg")
   ];
   
