@@ -5,7 +5,7 @@
 
 
 class Producto {
-    static contador = 0; // Variable estática para contar las instancias
+    static contador = 0; // Variable estática para contar cuantos objetos patito se crearon
   
     constructor(nombre, referencia, precio, imagen) {
       this.nombre = nombre;
@@ -16,7 +16,7 @@ class Producto {
     }
   }
   
-  // Crear productos
+ 
   const productos = [
     new Producto("Patito verde", "REF001", 10, "1.jpg"),
     new Producto("Patito mora", "REF002", 20, "2.jpg"),
